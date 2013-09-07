@@ -19,6 +19,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-dispatch'
 Bundle 'vim-ruby/vim-ruby'
@@ -61,9 +62,6 @@ set hidden
 set history=1000
 set number
 set expandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
 set textwidth=80
 set autoindent
 set laststatus=2
