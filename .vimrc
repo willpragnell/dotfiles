@@ -154,6 +154,12 @@ function! RenameCurrent()
 endfunction
 command! RenameCurrent :call RenameCurrent()
 
+" HIGHLIGHT FROM 81ST COLUMN ONWARDS
+" set background=light
+" set t_Co=256
+" highlight ColorColumn ctermbg=0
+" execute "set colorcolumn=" . join(range(81,335), ',')
+
 " REMOVE TRAILING WHITESPACE
 function! <SID>StripTrailingWhitespace()
   " Save last search, and cursor position.
