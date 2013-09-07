@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'jpalardy/vim-slime'
+Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
@@ -29,6 +30,28 @@ filetype plugin indent on
 let g:EasyMotion_leader_key = '<leader><space>'
 let g:slime_target = "tmux"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['objc'] }
+let g:syntastic_auto_loc_list=1
+syntax on " syntax must be set on before RainbowParentheses
+let g:rbpt_colorpairs = [
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['brown',       'RoyalBlue3'],
+    \ ['brown',       'firebrick3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['red',         'firebrick3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ]
+autocmd VimEnter * RainbowParenthesesToggle
+autocmd Syntax * RainbowParenthesesLoadRound
 
 " FILETYPE DETECTION
 autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
@@ -67,7 +90,6 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set shell=bash
 " Fix delay after pressing ESC then O - http://ksjoberg.com/vim-esckeys.html
 set timeout timeoutlen=1000 ttimeoutlen=100
-syntax on
 let mapleader=","
 
 augroup vimrcEx
