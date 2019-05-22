@@ -1,3 +1,4 @@
 caarlos0/zsh-mkc
+denysdovhan/spaceship-prompt
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-syntax-highlighting

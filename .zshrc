@@ -33,16 +33,16 @@ next() {
   tail -n +2 $NOWDOTHIS
 }
 alias ndt="vim $NOWDOTHIS"
-autoload -U vcs_info
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats "%{$fg[green]%}%b:%u%c%a%{$reset_color%}"
-precmd() { vcs_info }
-setopt prompt_subst
-autoload -U promptinit && promptinit
-PROMPT='%{$fg[green]%}%m %{$fg[blue]%}%~ %{$reset_color%}${vcs_info_msg_0_} %{$fg[yellow]%}$(nowdothis) %{$reset_color%}
-%{$fg[blue]%}❯ %{$reset_color%}'
-RPROMPT='%(?..%{$fg[red]%}%?%{$reset_color%})'
+# autoload -U vcs_info
+# zstyle ':vcs_info:*' enable git
+# zstyle ':vcs_info:*' check-for-changes true
+# zstyle ':vcs_info:git*' formats "%{$fg[green]%}%b:%u%c%a%{$reset_color%}"
+# precmd() { vcs_info }
+# setopt prompt_subst
+# autoload -U promptinit && promptinit
+# PROMPT='%{$fg[green]%}%m %{$fg[blue]%}%~ %{$reset_color%}${vcs_info_msg_0_} %{$fg[yellow]%}$(nowdothis) %{$reset_color%}
+# %{$fg[blue]%}❯ %{$reset_color%}'
+# RPROMPT='%(?..%{$fg[red]%}%?%{$reset_color%})'
 
 # Better history
 HISTFILE="$HOME/.zhistory"
@@ -103,3 +103,17 @@ zsh_update_plugins() {
   antibody bundle < ~/.zplugins.txt > ~/.zplugins.sh
   sed -i '' "s,$HOME,\$HOME,g" ~/.zplugins.sh
 }
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_GIT_PREFIX='1'
+SPACESHIP_GIT_SYMBOL='2'
+SPACESHIP_PROMPT_ORDER=(
+  # time
+  user
+  dir
+  # host
+  git
+  # exec_time
+  # jobs
+  # exit_code
+  char
+)
