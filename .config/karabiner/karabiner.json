@@ -35,6 +35,26 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "disable backspace in iterm2 and alacritty",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "delete_or_backspace"
+                                },
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "com.googlecode.iterm2",
+                                            "io.alacritty"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -53,14 +73,6 @@
                     "simple_modifications": [
                         {
                             "from": {
-                                "key_code": "left_option"
-                            },
-                            "to": {
-                                "key_code": "left_command"
-                            }
-                        },
-                        {
-                            "from": {
                                 "key_code": "left_command"
                             },
                             "to": {
@@ -69,10 +81,10 @@
                         },
                         {
                             "from": {
-                                "key_code": "right_option"
+                                "key_code": "left_option"
                             },
                             "to": {
-                                "key_code": "right_command"
+                                "key_code": "left_command"
                             }
                         },
                         {
@@ -81,6 +93,14 @@
                             },
                             "to": {
                                 "key_code": "right_option"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_option"
+                            },
+                            "to": {
+                                "key_code": "right_command"
                             }
                         }
                     ]
