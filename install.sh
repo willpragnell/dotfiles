@@ -23,6 +23,10 @@ chsh -s "$(command -v zsh)"
 
 stow -t ~ git
 
+if [[ ! -d ~/.config/.tmux/plugins/tpm ]]; then
+    mkdir -p ~/.config/.tmux/plugins
+    git clone git@github.com:tmux-plugins/tpm ~/.config/.tmux/plugins/tpm
+fi
 stow -t ~ tmux
 
 stow -t ~ vim
