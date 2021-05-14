@@ -1,18 +1,20 @@
 git diff-highlight isn't installed on ubuntu by default (using diffr for now)
-
 fzf paths
 zsh plugins
 
-xdg_open_wsl: https://raw.githubusercontent.com/cpbotha/xdg-open-wsl/master/xdg_open_wsl/xdg_open_wsl.py
+things to add for linux / wsl:
+- xdg_open_wsl: https://raw.githubusercontent.com/cpbotha/xdg-open-wsl/master/xdg_open_wsl/xdg_open_wsl.py
+
+things to add for osx:
+- OS X keybindings in Library
+- karabiner
 
 things that won't make it for now:
-- xcpretty (or will it?)
-- karabiner
-- things
-- Spectacle
-- OS X keybindings in Library
-- airdrop toggling
+- xcpretty
+- Spectacle config
 
 cruft that was dropped:
+- things
 - git link
 - neovim
+- airdrop toggling
