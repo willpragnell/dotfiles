@@ -53,8 +53,10 @@ let mapleader=','
 " Plugin configuration
 runtime macros/matchit.vim
 let g:ale_completion_enabled = 1
+let g:ale_completion_delay = 500
 let g:ale_open_list = 1
 let g:ale_list_window_size = 4
+nnoremap <leader>af <Plug>(ale_fix)
 let g:clang_format#auto_format = 1
 let g:elm_format_autosave = 1
 let g:gh_use_canonical = 1
@@ -64,6 +66,7 @@ let g:sexp_enable_insert_mode_mappings = 0
 let g:signify_vcs_list = [ 'git' ]
 let g:tidal_no_mappings = 1
 let g:fzf_command_prefix = 'FZF'
+" TODO better plug mappings here, can do more stuff (like completion)
 nnoremap <leader>f :FZFFiles<cr>
 nnoremap <leader>b :FZFBuffers<cr>
 nnoremap \| :TagbarToggle<cr>
@@ -73,9 +76,9 @@ let g:slime_default_config = {'socket_name': get(split($TMUX, ','), 0), 'target_
 let g:slime_dont_ask_default = 1
 let g:slime_haskell_ghci_add_let = 0
 let g:slime_target = 'tmux'
-imap <c-j> <esc><Plug>SlimeParagraphSend<cr>
-nmap <c-j> <Plug>SlimeParagraphSend<cr>
-xmap <c-j> <Plug>SlimeRegionSend<cr>
+imap <c-j> <esc><Plug>SlimeParagraphSend
+nmap <c-j> <Plug>SlimeParagraphSend
+xmap <c-j> <Plug>SlimeRegionSend
 
 " Go
 let g:go_fmt_command = 'goimports'

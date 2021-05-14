@@ -37,4 +37,7 @@
 [advice]
 	statusHints = false
 
+# in vim, something sets tabstop to 8 but leaves shiftwidth at 4, which leads
+# to indentation weirdness...
+
 # vim: noexpandtab
