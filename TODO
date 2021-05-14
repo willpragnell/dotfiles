@@ -1,6 +1,8 @@
-git diff-highlight isn't installed on ubuntu by default
+git diff-highlight isn't installed on ubuntu by default (using diffr for now)
+
 fzf paths
 zsh plugins
+
 xdg_open_wsl: https://raw.githubusercontent.com/cpbotha/xdg-open-wsl/master/xdg_open_wsl/xdg_open_wsl.py
 
 things that won't make it for now:
